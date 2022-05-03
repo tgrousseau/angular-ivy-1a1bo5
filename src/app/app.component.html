@@ -1,4 +1,4 @@
-<h1>Step 2: Angular</h1>
+<h1>Step 3: Angular</h1>
 
 <p>
   We now have a simple recipe card, but for now it is static <br />
@@ -6,9 +6,8 @@
 </p>
 
 <div class="recipe">
-  <img
-    class="recipe__picture"
-    src="https://assets.afcdn.com/recipe/20161128/28118_w1024h1024c1cx845cy3505.jpg"
-  />
-  <h3>Quiche Lorraine</h3>
+  <img class="recipe__picture" [src]="recipe.picture" />
+  <h3>
+    {{ recipe.title }}
+  </h3>
 </div>
