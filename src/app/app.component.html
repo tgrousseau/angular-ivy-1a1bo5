@@ -1,15 +1,18 @@
-<h1>Step 5: Add an Angular service</h1>
+<h1>Step 6: Play around with rxjs</h1>
 
 <p>
-  Most of the time, components shouldn't display mock data, but should have a
-  service provide the data to them instead <br />
-  A new folder "services" has appeared in the source code ; in it you will see a
-  service named RecipesService. For the sake of brevity, this service has
-  already been added to the app correctly. <br /><br />
-  Use the RecipesService to fetch the list of recipes, as if it was fetched from
-  an API, and bind the result to the template the same way you did in the
-  previous tasks.
+  Rxjs is a very useful library, and if you want to manipulate your data in any
+  way, you will use it. In fact, you probably have noticed that you have already
+  used it in the precedent step, as Observable and of are part of rxjs.
 </p>
+<p>
+  Task 1 : filter the list of recipes to only display those that have the letter
+  n in their title
+</p>
+<p>
+  Task 2 : get the first recipe in the list that has the letter u in its title
+</p>
+<p>Task 3 : Replace all recipes titles by just their first letter</p>
 
 <div class="recipes">
   <recipe-card *ngFor="let recipe of recipes" [recipe]="recipe"></recipe-card>
