@@ -1,9 +1,37 @@
 <h1>Step 3: Angular</h1>
 
 <p>
-  We now have a simple recipe card, but for now it is static <br />
-  Start using Angular to pass the data (the recipe) to your HTML template
+  Now that we passed some data to the template, why not go further and display a
+  list of recipes ? <br />
+  You can use the following recipes to populate your list:
 </p>
+
+<ul>
+  <li>
+    title: "Pizza de la mer", picture:
+    "https://www.google.fr/url?sa=i&url=https%3A%2F%2Fwww.quiveutdufromage.com%2Fr-pizza-de-la-mer&psig=AOvVaw2_u_n8Z2053fKLoxvQlaub&ust=1651669230626000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJD8-MKxw_cCFQAAAAAdAAAAABAD"
+  </li>
+  <li>
+    title: "Burger végan", picture:
+    "https://www.google.fr/url?sa=i&url=https%3A%2F%2Fwww.gardengourmet.ch%2Ffr%2Frecette%2Fburger-epice&psig=AOvVaw0Y3vbJPdtoPd4I299j7Rdf&ust=1651669357553000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNDrgoCyw_cCFQAAAAAdAAAAABAD"
+  </li>
+  <li>
+    title: "Pâtes au pesto", picture:
+    "https://img.cuisineaz.com/660x660/2016/04/28/i2894-pates-fraiches-au-pesto.jpg"
+  </li>
+  <li>
+    title: "Fondue savoyarde", picture:
+    "https://assets.afcdn.com/recipe/20161130/59380_w1024h768c1cx2808cy1872.webp"
+  </li>
+  <li>
+    title: "Poutine", picture:
+    "https://www.spendwithpennies.com/wp-content/uploads/2021/05/Poutine-SpendWithPennies-7.jpg"
+  </li>
+  <li>
+    title: "Fish & chips", picture:
+    "https://static.actu.fr/uploads/2020/09/restaurant-les-fishtons-rue-des-bouches-vieux-lille-fish-and-chips-poisson.jpeg"
+  </li>
+</ul>
 
 <div class="recipe">
   <img class="recipe__picture" [src]="recipe.picture" />
