@@ -1,23 +1,16 @@
-<h1>Step 4: Make content more generic with Angular</h1>
+<h1>Step 5: Add an Angular service</h1>
 
 <p>
-  Now that we have displayed a list of recipes, we have noticed some code
-  duplication happening. <br />
-  Let's try to make this more generic !
+  Most of the time, components shouldn't display mock data, but should have a
+  service provide the data to them instead <br />
+  A new folder "services" has appeared in the source code ; in it you will see a
+  service named RecipesService. For the sake of brevity, this service has
+  already been added to the app correctly. <br /><br />
+  Use the RecipesService to fetch the list of recipes, as if it was fetched from
+  an API, and bind the result to the template the same way you did in the
+  previous tasks.
 </p>
 
-<div class="recipe">
-  <img class="recipe__picture" [src]="recipe.picture" />
-  <h3>
-    {{ recipe.title }}
-  </h3>
-</div>
-
 <div class="recipes">
-  <div class="recipe" *ngFor="let recipe of recipes">
-    <img class="recipe__picture" [src]="recipe.picture" />
-    <h3>
-      {{ recipe.title }}
-    </h3>
-  </div>
+  <recipe-card *ngFor="let recipe of recipes" [recipe]="recipe"></recipe-card>
 </div>

@@ -1,29 +1,8 @@
-.recipe {
-  height: 300px;
-  width: 200px;
-  border: solid 1px #c0c0c0;
-  border-radius: 12px;
-
-  .recipe__picture {
-    height: 200px;
-    width: 200px;
-    border-radius: 12px;
-    object-fit: cover;
-  }
-
-  h3 {
-    margin-left: 8px;
-  }
-}
-
 .recipes {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
   justify-content: space-between;
   margin-top: 24px;
-
-  .recipe {
-    margin: 8px;
-  }
+  gap: 16px;
 }
