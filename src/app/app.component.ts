@@ -22,4 +22,13 @@ export class AppComponent {
       this.recipes = recipesList;
     });
   }
+
+  // Task 4
+  recipeSuscribe() {
+    let a = 3;
+    this.recipeService.getRecipes().subscribe(() => {
+      a = 5;
+    });
+    console.log(a);
+  }
 }
