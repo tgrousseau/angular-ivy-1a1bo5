@@ -23,7 +23,7 @@ export class AppComponent {
     });
   }
 
-  // Task 4
+  // Task 1
   recipeSuscribe() {
     let a = 3;
     this.recipeService.getRecipes().subscribe(() => {

@@ -6,18 +6,18 @@
   used it in the precedent step, as Observable and of are part of rxjs.
 </p>
 <p>
-  Task 1: filter the list of recipes to only display those that have the letter
-  n in their title
-</p>
-<p>
-  Task 2: get the first recipe in the list that has the letter u in its title
-</p>
-<p>Task 3: Replace all recipes titles by just their first letter</p>
-<p>
-  Task 4: Look at the method recipeSuscribe at line 27 of the app.component.ts.
+  Task 1: Look at the method recipeSuscribe at line 27 of the app.component.ts.
   This function has a console.log() at the end. Without calling the method, can
   you say what will be printed in the console and why ?
 </p>
+<p>
+  Task 2: filter the list of recipes to only display those that have the letter
+  n in their title
+</p>
+<p>
+  Task 3: get the first recipe in the list that has the letter u in its title
+</p>
+<p>Task 4: Replace all recipes titles by just their first letter</p>
 
 <div class="recipes">
   <recipe-card *ngFor="let recipe of recipes" [recipe]="recipe"></recipe-card>
