@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
-import { Recipe } from '../models/recipe.model';
+import { Recipe } from '../app/app.component';
 
 const RECIPES_ARRAY = [
   [

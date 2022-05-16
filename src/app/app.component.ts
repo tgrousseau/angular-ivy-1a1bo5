@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
-import { Recipe } from '../models/recipe.model';
 import { RecipesService } from '../services/recipes.service';
+
+export interface Recipe {
+  title: string;
+  picture: string;
+}
 
 @Component({
   selector: 'my-app',
