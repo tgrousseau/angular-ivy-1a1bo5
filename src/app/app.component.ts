@@ -1,6 +1,6 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
 import { Recipe } from '../models/recipe.model';
-import { RecipeService } from '../services/recipes.service';
+import { RecipesService } from '../services/recipes.service';
 
 @Component({
   selector: 'my-app',
@@ -11,24 +11,28 @@ export class AppComponent {
   recipe: Recipe;
   recipes: Recipe[];
 
-  constructor(private recipeService: RecipeService) {
+  constructor(public recipesService: RecipesService) {
     this.recipe = {
       title: 'Quiche Lorraine',
       picture:
         'https://assets.afcdn.com/recipe/20161128/28118_w1024h1024c1cx845cy3505.jpg',
     };
 
-    recipeService.getRecipes().subscribe((recipesList) => {
+    recipesService.getRecipes().subscribe((recipesList) => {
       this.recipes = recipesList;
     });
   }
 
   // Task 1
-  recipeSuscribe() {
+  recipeSubscribe() {
     let a = 3;
-    this.recipeService.getRecipes().subscribe(() => {
+    this.recipesService.getRecipes().subscribe(() => {
       a = 5;
     });
     console.log(a);
+  }
+
+  swapRecipes() {
+    this.recipesService.swapRecipes();
   }
 }

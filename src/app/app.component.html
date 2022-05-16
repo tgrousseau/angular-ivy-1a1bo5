@@ -1,23 +1,37 @@
 <h1>Step 6: Play around with rxjs</h1>
 
 <p>
-  Rxjs is a very useful library, and if you want to manipulate your data in any
-  way, you will use it. In fact, you probably have noticed that you have already
-  used it in the precedent step, as Observable and of are part of rxjs.
+  Rxjs is a very useful library, and if you want to manipulate the data from
+  your API, you will use it. In fact, you probably have noticed that you have
+  already used it in the precedent step, as <i>Observable</i> and <i>of</i> are
+  part of rxjs.
 </p>
 <p>
-  Task 1: Look at the method recipeSuscribe at line 27 of the app.component.ts.
-  This function has a console.log() at the end. Without calling the method, can
-  you say what will be printed in the console and why ?
+  <b>Task 1:</b> Look at the method recipeSubscribe at line 27 of the
+  app.component.ts. This function has a console.log() at the end. Without
+  calling the method, can you say what will be printed in the console and why ?
 </p>
+<br />
 <p>
-  Task 2: filter the list of recipes to only display those that have the letter
-  n in their title
+  We now have 3 sets of 2 recipes instead of a list of 6 recipes. You can swap
+  sets of recipes with the button below. This will change the value in the
+  Observable recipes$ from the recipesService, in order to simulate an
+  observable having multiple values
 </p>
+<p><b>Task 2:</b> Ignore every change of recipes sets after the 2nd change</p>
+<br />
 <p>
-  Task 3: get the first recipe in the list that has the letter u in its title
+  <b>Task 3:</b> for each recipes set, remove the second recipe from the set
 </p>
-<p>Task 4: Replace all recipes titles by just their first letter</p>
+<br />
+<p>
+  <b>Task 4:</b> filter the result for recipes$ to display only the sets where
+  at least one recipe has a "s" in its title
+</p>
+
+<button (click)="swapRecipes()">Swap recipes sets !</button>
+
+<h1>Set n°{{ recipesService.index + 1 }}:</h1>
 
 <div class="recipes">
   <recipe-card *ngFor="let recipe of recipes" [recipe]="recipe"></recipe-card>
